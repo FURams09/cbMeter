@@ -1,0 +1,26 @@
+﻿#meter {
+  position: absolute;
+  left: 220px;
+  top: 224px;
+  z-index: 99999;
+  width: 130px;
+  transform: rotate(-90deg); }
+
+#stationMap {
+  width: 300px;
+  height: 500px; }
+
+#stationInfo {
+  display: block; }
+
+#station {
+  width: 240px; }
+
+.ui-selectmenu-button {
+  height: 30px;
+  padding: 0 0 0 6px !important; }
+
+.ui-selectmenu-open {
+  max-height: 200px;
+  overflow-y: scroll; }
+

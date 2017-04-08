@@ -1,0 +1,28 @@
+﻿html
+    head
+        title= title
+        link(rel='stylesheet', href='stylesheets/styles.css')
+        link(rel='stylesheet', href='stylesheets/jquery-ui.css')
+        link(rel='stylesheet', href='stylesheets/jquery-ui.theme.css')
+        script(src='javascript/jquery-3.2.0.js')
+        script(src='javascript/jquery-ui.js')
+        script(src='javascript/maps.js')
+        
+    body
+        div#meter(style="display:none;")
+
+        div#stationMap
+
+        div#stationInfo
+            select#station
+                -for (let i = 0; i < station_list.length; i++)  {
+                    option(value= station_list[i].station_id data-lng= station_list[i].gps.coordinates[0] data-lat= station_list[i].gps.coordinates[1] 
+                    data-name= station_list[i].name data-bikes= station_list[i].bikes data-racks= station_list[i].racks)= station_list[i].name
+                -}
+            
+            br
+            label#racksAvailable= 'Open Racks: ' + station.racks
+            br
+            label#bikesAvailable= 'Bikes Available: ' + station.bikes
+
+        script(src=mapUrl)
