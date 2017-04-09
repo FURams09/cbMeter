@@ -26,10 +26,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('stylus').middleware(path.join(__dirname, 'Resources')));
 app.use(express.static(path.join(__dirname, 'Resources')));
 
 app.use('/', routes);
+app.use('/img', express.static(path.join(__dirname, 'Resources/images')));
 app.use('/users', users);
 
 // catch 404 and forward to error handler

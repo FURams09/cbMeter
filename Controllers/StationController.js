@@ -72,7 +72,7 @@ var refreshStationData = new Promise((resolve, reject) => {
 });
 
 var getStationList = new Promise((resolve, reject) => {
-    Stations.find({}).select('station_id name gps bikes racks').limit(200)
+    Stations.find({}).select('station_id name gps bikes racks').skip(300).limit(50)
         .sort([['name', 'ascending']])
         .then((station_list) => {
             console.log(station_list);

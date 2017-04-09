@@ -64,17 +64,16 @@
       <DependentUpon>Resources\stylesheets\styles.css</DependentUpon>
     </Content>
     <Content Include="Resources\stylesheets\styles.scss" />
-    <Content Include="stylesheets\images\here.html" />
-    <Content Include="stylesheets\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
-    <Content Include="stylesheets\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
-    <Content Include="stylesheets\images\ui-bg_dots-small_20_333333_2x2.png" />
-    <Content Include="stylesheets\images\ui-bg_dots-small_30_a32d00_2x2.png" />
-    <Content Include="stylesheets\images\ui-bg_dots-small_40_00498f_2x2.png" />
-    <Content Include="stylesheets\images\ui-bg_gloss-wave_20_111111_500x100.png" />
-    <Content Include="stylesheets\images\ui-icons_00498f_256x240.png" />
-    <Content Include="stylesheets\images\ui-icons_98d2fb_256x240.png" />
-    <Content Include="stylesheets\images\ui-icons_9ccdfc_256x240.png" />
-    <Content Include="stylesheets\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Resources\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="Resources\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="Resources\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="Resources\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="Resources\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="Resources\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="Resources\images\ui-icons_00498f_256x240.png" />
+    <Content Include="Resources\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="Resources\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="Resources\images\ui-icons_ffffff_256x240.png" />
     <Content Include="typings.json" />
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
@@ -84,12 +83,13 @@
     <Folder Include="bin\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="public\" />
     <Folder Include="stylesheets\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\javascript\" />
     <Folder Include="Resources\stylesheets\" />
     <Folder Include="routes\" />
-    <Folder Include="stylesheets\images\" />
+    <Folder Include="Resources\images\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\body-parser\" />
