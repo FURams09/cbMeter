@@ -34,7 +34,8 @@
     <Compile Include="Controllers\StationController.js" />
     <Compile Include="Models\stations.js" />
     <Compile Include="config.js" />
-    <Compile Include="Resources\javascript\jquery-3.2.0.js" />
+    <Compile Include="Resources\javascript\CustomMarker.js" />
+    <Compile Include="Resources\jquery\jquery-3.2.0.js" />
     <Compile Include="Resources\javascript\maps.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
@@ -48,13 +49,12 @@
     <Content Include="package.json" />
     <Content Include="public\stylesheets\Stylesheet1.css" />
     <Content Include="README.md" />
-    <Content Include="Resources\stylesheets\circle.css" />
-    <Content Include="Resources\stylesheets\jquery-ui.css" />
-    <Content Include="Resources\stylesheets\jquery-ui.min.css" />
-    <Content Include="Resources\stylesheets\jquery-ui.structure.css" />
-    <Content Include="Resources\stylesheets\jquery-ui.structure.min.css" />
-    <Content Include="Resources\stylesheets\jquery-ui.theme.css" />
-    <Content Include="Resources\stylesheets\jquery-ui.theme.min.css" />
+    <Content Include="Resources\jquery\jquery-ui.css" />
+    <Content Include="Resources\jquery\jquery-ui.min.css" />
+    <Content Include="Resources\jquery\jquery-ui.structure.css" />
+    <Content Include="Resources\jquery\jquery-ui.structure.min.css" />
+    <Content Include="Resources\jquery\jquery-ui.theme.css" />
+    <Content Include="Resources\jquery\jquery-ui.theme.min.css" />
     <Content Include="Resources\stylesheets\styles.css">
       <SubType>Content</SubType>
       <DependentUpon>Resources\stylesheets\styles.scss</DependentUpon>
@@ -84,6 +84,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="public\" />
+    <Folder Include="Resources\jquery\" />
     <Folder Include="stylesheets\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\javascript\" />

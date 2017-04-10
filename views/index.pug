@@ -2,10 +2,10 @@
     head
         title= title
         link(rel='stylesheet', href='stylesheets/styles.css')
-        link(rel='stylesheet', href='stylesheets/jquery-ui.css')
-        link(rel='stylesheet', href='stylesheets/jquery-ui.theme.css')
-        script(src='javascript/jquery-3.2.0.js')
-        script(src='javascript/jquery-ui.js')
+        link(rel='stylesheet', href='jquery/jquery-ui.css')
+        link(rel='stylesheet', href='jquery/jquery-ui.theme.css')
+        script(src='jquery/jquery-3.2.0.js')
+        script(src='jquery/jquery-ui.js')
         script(src='javascript/maps.js')
         
     body
@@ -21,8 +21,8 @@
                 -}
             
             br
-            label#racksAvailable= 'Open Racks: ' + station.racks
+            label#racksAvailable
             br
-            label#bikesAvailable= 'Bikes Available: ' + station.bikes
-
+            label#bikesAvailable
+            input#refreshStations(type= 'submit', value= 'Refresh' onclick= "refreshPage()")
         script(src=mapUrl)

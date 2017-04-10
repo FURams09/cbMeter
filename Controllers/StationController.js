@@ -13,8 +13,6 @@ var StationController  = {
 
                      res.render('index', {
                          title: 'Express',
-                         station: start_station,
-                         percent_capacity: Math.floor(start_station.bikes / (start_station.bikes + start_station.racks) * 100),
                          station_list: stations,
                          mapUrl: 'http://maps.googleapis.com/maps/api/js?key=' + config.maps_api_key + '&callback=buildMapForStation'
 
@@ -22,7 +20,10 @@ var StationController  = {
                  })
                  .catch(next);
          }).catch(next);
-    }
+    }, 
+ refreshStationList: function (req, res, next) {
+    console.log(req.body)
+ }
 }
 
 var refreshStationData = new Promise((resolve, reject) => {
@@ -72,8 +73,8 @@ var refreshStationData = new Promise((resolve, reject) => {
 });
 
 var getStationList = new Promise((resolve, reject) => {
-    Stations.find({}).select('station_id name gps bikes racks').skip(300).limit(50)
-        .sort([['name', 'ascending']])
+    Stations.find({}).select('station_id name gps bikes racks').sort([['name', 'ascending']]).skip(300).limit(50)
+        
         .then((station_list) => {
             console.log(station_list);
             resolve(station_list);

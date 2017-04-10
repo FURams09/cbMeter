@@ -40,6 +40,7 @@ function buildMapForStation() {
         });
 
     });
+
     function setScreen(value, recenterMap) {
         $('#station').val(value);
         let $option = $("#station option[value='" + value + "']");
@@ -50,6 +51,15 @@ function buildMapForStation() {
         }
 
     }
+}
+
+
+function refreshPage() {
+    $.ajax({
+        type: "POST",
+        url: "/refreshStations",
+        data: { start_station_id: $('#station').val() }
+    })
 }
 function getStationFullPct(bikes, racks) {
     return Math.floor((bikes / (bikes + racks)) * 100)
