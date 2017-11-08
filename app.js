@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/citi_bike');
+mongoose.connect('mongodb://localhost/citi_bike', { useMongoClient: true });
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

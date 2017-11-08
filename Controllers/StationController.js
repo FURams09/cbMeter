@@ -9,7 +9,6 @@ var StationController  = {
          .then(() => {
              getStationList
                  .then((stations) => {
-                     var start_station = stations[Math.floor(Math.random() * stations.length)]
 
                      res.render('index', {
                          title: 'Express',
@@ -22,8 +21,9 @@ var StationController  = {
          }).catch(next);
     }, 
  refreshStationList: function (req, res, next) {
-    console.log(req.body)
- }
+	 refreshStationData.then((list) => { console.log(list)})
+    
+	}
 }
 
 var refreshStationData = new Promise((resolve, reject) => {
@@ -76,7 +76,7 @@ var getStationList = new Promise((resolve, reject) => {
     Stations.find({}).select('station_id name gps bikes racks').sort([['name', 'ascending']]).skip(300).limit(50)
         
         .then((station_list) => {
-            console.log(station_list);
+            //console.log(station_list);
             resolve(station_list);
         })
         .catch(reject);
